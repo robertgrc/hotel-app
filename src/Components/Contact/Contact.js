@@ -4,7 +4,7 @@ import React from "react";
 const Contact = () => {
   return (
     <Box sx={{ display: "flex" }}>
-      <Box my={3} sx={{ width: 500 }} borderBottom={0}>
+      <Box my={3} sx={{ width: 500 }}>
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Card>
@@ -14,7 +14,6 @@ const Contact = () => {
                   label="Nombre Completo"
                   type="text"
                   name="nombreCompleto"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                   helperText="Campo obligatorio"
@@ -32,7 +31,6 @@ const Contact = () => {
                   label="E-mail"
                   type="text"
                   name="email"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                   helperText="Campo obligatorio"
@@ -48,7 +46,6 @@ const Contact = () => {
                   label="Telefono-Celular"
                   type="number"
                   name="phone"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                   helperText="Campo obligatorio"
@@ -66,7 +63,6 @@ const Contact = () => {
                   label="Tarjeta de Credito"
                   type="text"
                   name="targetaCredito"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -81,7 +77,6 @@ const Contact = () => {
                   label="Numero Targeta"
                   type="number"
                   name="numeroTarjeta"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -98,7 +93,6 @@ const Contact = () => {
                   label="Empresa/Institucion"
                   type="text"
                   name="empresa"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -113,7 +107,6 @@ const Contact = () => {
                   label="Telefono"
                   type="number"
                   name="telefonoEmpresa"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -130,7 +123,6 @@ const Contact = () => {
                   label="Reservado por:"
                   type="text"
                   name="nombreReservante"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                   helperText="Campo obligatorio"
@@ -148,7 +140,6 @@ const Contact = () => {
                   label="Fecha y hora de la reserva:"
                   type="text"
                   name="fechaReserva"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                   helperText="Campo obligatorio"
@@ -166,7 +157,6 @@ const Contact = () => {
                   label="SWB"
                   type="text"
                   name="SWB"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -181,7 +171,6 @@ const Contact = () => {
                   label="MAT"
                   type="text"
                   name="MAT"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -196,7 +185,6 @@ const Contact = () => {
                   label="DWB"
                   type="text"
                   name="DWB"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -211,7 +199,6 @@ const Contact = () => {
                   label="TWB"
                   type="text"
                   name="TWB"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
@@ -225,8 +212,7 @@ const Contact = () => {
                   error={false}
                   label="SUITE"
                   type="text"
-                  name="SWB"
-                  margin="SUITE"
+                  name="Suite"
                   fullWidth
                   variant="outlined"
                 />
@@ -240,8 +226,7 @@ const Contact = () => {
                   error={false}
                   label="SIMPLE"
                   type="text"
-                  name="SWB"
-                  margin="SIMPLE"
+                  name="Simple"
                   fullWidth
                   variant="outlined"
                 />
@@ -255,8 +240,7 @@ const Contact = () => {
                   error={false}
                   label="DOBLE"
                   type="text"
-                  name="SWB"
-                  margin="DOBLE"
+                  name="Doble"
                   fullWidth
                   variant="outlined"
                 />
@@ -273,7 +257,6 @@ const Contact = () => {
                   label="Observaciones"
                   type="text"
                   name="Observaciones"
-                  margin="dense"
                   fullWidth
                   variant="outlined"
                 />
