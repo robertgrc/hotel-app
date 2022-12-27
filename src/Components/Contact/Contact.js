@@ -1,15 +1,35 @@
 import { Box, Card, CardContent, Grid, TextField } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [nameContact, setNameContact] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneContact, setPhoneContact] = useState("");
+  const [creditCard, setCreditCard] = useState("");
+  const [numberCreditCard, setNumberCreditCard] = useState("");
+  const [company, setCompany] = useState("");
+  const [phoneCompany, setPhoneCompany] = useState("");
+  const [reserved, setReserved] = useState("");
+  const [reservationDate, setReservationDate] = useState("");
+  const [observations, setObservations] = useState("");
+  console.log(creditCard);
+  console.log(numberCreditCard);
+  console.log(company);
+  console.log(phoneCompany);
+  console.log(reserved);
+  console.log(reservationDate);
+  console.log(observations);
+
   return (
     <Box sx={{ display: "flex" }}>
-      <Box my={3} sx={{ width: 500 }}>
+      <Box my={3} sx={{ width: "50%" }}>
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setNameContact(e.target.value)}
+                  value={nameContact}
                   error={false}
                   label="Nombre Completo"
                   type="text"
@@ -27,6 +47,8 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   error={false}
                   label="E-mail"
                   type="text"
@@ -42,6 +64,8 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setPhoneContact(e.target.value)}
+                  value={phoneContact}
                   error={false}
                   label="Telefono-Celular"
                   type="number"
@@ -59,6 +83,8 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setCreditCard(e.target.value)}
+                  value={creditCard}
                   error={false}
                   label="Tarjeta de Credito"
                   type="text"
@@ -73,8 +99,10 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setNumberCreditCard(e.target.value)}
+                  value={numberCreditCard}
                   error={false}
-                  label="Numero Targeta"
+                  label="Numero Tarjeta"
                   type="number"
                   name="numeroTarjeta"
                   fullWidth
@@ -89,6 +117,8 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setCompany(e.target.value)}
+                  value={company}
                   error={false}
                   label="Empresa/Institucion"
                   type="text"
@@ -103,6 +133,8 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setPhoneCompany(e.target.value)}
+                  value={phoneCompany}
                   error={false}
                   label="Telefono"
                   type="number"
@@ -119,6 +151,8 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setReserved(e.target.value)}
+                  value={reserved}
                   error={false}
                   label="Reservado por:"
                   type="text"
@@ -136,13 +170,15 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setReservationDate(e.target.value)}
+                  value={reservationDate}
                   error={false}
-                  label="Fecha y hora de la reserva:"
-                  type="text"
+                  label=""
+                  type="date"
                   name="fechaReserva"
                   fullWidth
                   variant="outlined"
-                  helperText="Campo obligatorio"
+                  helperText="fecha y hora de la reserva(Campo obligatorio)"
                 />
               </CardContent>
             </Card>
@@ -253,6 +289,8 @@ const Contact = () => {
             <Card>
               <CardContent>
                 <TextField
+                  onChange={(e) => setObservations(e.target.value)}
+                  value={observations}
                   error={false}
                   label="Observaciones"
                   type="text"
