@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, Grid, TextField } from "@mui/material";
 import React, { useState } from "react";
+import ContactCheckbox from "./ContactCheckbox";
 
 const Contact = () => {
   const [nameContact, setNameContact] = useState("");
@@ -184,105 +185,9 @@ const Contact = () => {
             </Card>
           </Grid>
         </Grid>
-        <Grid container direction="row" spacing={2}>
-          <Grid item xs={1.7}>
-            <Card>
-              <CardContent>
-                <TextField
-                  error={false}
-                  label="SWB"
-                  type="text"
-                  name="SWB"
-                  fullWidth
-                  variant="outlined"
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={1.7}>
-            <Card>
-              <CardContent>
-                <TextField
-                  error={false}
-                  label="MAT"
-                  type="text"
-                  name="MAT"
-                  fullWidth
-                  variant="outlined"
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={1.7}>
-            <Card>
-              <CardContent>
-                <TextField
-                  error={false}
-                  label="DWB"
-                  type="text"
-                  name="DWB"
-                  fullWidth
-                  variant="outlined"
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={1.7}>
-            <Card>
-              <CardContent>
-                <TextField
-                  error={false}
-                  label="TWB"
-                  type="text"
-                  name="TWB"
-                  fullWidth
-                  variant="outlined"
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={1.7}>
-            <Card>
-              <CardContent>
-                <TextField
-                  error={false}
-                  label="SUITE"
-                  type="text"
-                  name="Suite"
-                  fullWidth
-                  variant="outlined"
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={1.7}>
-            <Card>
-              <CardContent>
-                <TextField
-                  error={false}
-                  label="SIMPLE"
-                  type="text"
-                  name="Simple"
-                  fullWidth
-                  variant="outlined"
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={1.7}>
-            <Card>
-              <CardContent>
-                <TextField
-                  error={false}
-                  label="DOBLE"
-                  type="text"
-                  name="Doble"
-                  fullWidth
-                  variant="outlined"
-                />
-              </CardContent>
-            </Card>
-          </Grid>
+
+        <Grid>
+          <ContactCheckbox />
         </Grid>
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
