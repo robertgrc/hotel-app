@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Grid, TextField } from "@mui/material";
+import { Box, Button, Card, CardContent, Grid, TextField } from "@mui/material";
 import React, { useState } from "react";
 import ContactCheckbox from "./ContactCheckbox";
 
@@ -207,6 +207,9 @@ const Contact = () => {
             </Card>
           </Grid>
         </Grid>
+        <Button variant="contained">Enviar Formulario</Button>
+        <Button variant="contained">Obtener Formularios</Button>
+        <Button variant="contained">Actualizar Formulario</Button>
       </Box>
     </Box>
   );
