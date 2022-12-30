@@ -1,10 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import FormLabel from "@mui/material/FormLabel";
+//import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import FormHelperText from "@mui/material/FormHelperText";
+//import FormHelperText from "@mui/material/FormHelperText";
 import Checkbox from "@mui/material/Checkbox";
 
 export default function ContactCheckbox() {
@@ -32,9 +32,13 @@ export default function ContactCheckbox() {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <FormLabel component="legend">Tipo de Habitación</FormLabel>
+      {/* <FormLabel component="legend">Tipo de Habitación</FormLabel> */}
 
-      <FormControl sx={{ m: 4 }} component="fieldset" variant="standard">
+      <FormControl
+        sx={{ ml: 7, mr: 7 }}
+        component="fieldset"
+        variant="standard"
+      >
         <FormGroup>
           <FormControlLabel
             control={
@@ -62,11 +66,11 @@ export default function ContactCheckbox() {
           />
         </FormGroup>
 
-        <FormHelperText>
+        {/* <FormHelperText>
           Seleccione el tipo de habitacion que desea (Campo obligatorio)
-        </FormHelperText>
+        </FormHelperText> */}
       </FormControl>
-      <FormControl sx={{ m: 4 }} component="fieldset" variant="standard">
+      <FormControl sx={{}} component="fieldset" variant="standard">
         <FormGroup>
           <FormControlLabel
             control={
