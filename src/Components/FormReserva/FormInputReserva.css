@@ -27,6 +27,7 @@ h1{
     text-align: center;
 }
 
+
 button{
     width: 100%;
     height: 50px;
@@ -44,8 +45,13 @@ button{
 
 .formInputReserva{
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction:column;
     width: 400px;
+}
+
+h2{
+    color: rgb(145, 85, 253);
+    text-align: center;
 }
 
 /* label{

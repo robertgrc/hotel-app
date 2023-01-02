@@ -77,7 +77,7 @@ const FormReserva = () => {
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
-        <h1>Registro</h1>
+        <h2>FORMULARIO DE RESERVAS</h2>
         {inputs.map((input) => (
           <FormInputReserva
             key={input.id}
