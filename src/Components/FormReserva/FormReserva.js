@@ -1,14 +1,20 @@
 import { useState } from "react";
 import FormInputReserva from "./FormInputReserva";
 import "./FormInputReserva";
+import ContactCheckbox from "../Contact/ContactCheckbox";
 
 const FormReserva = () => {
   const [values, setValues] = useState({
     userName: "",
     email: "",
-    birthday: "",
-    password: "",
-    confirmPassword: "",
+    phone: "",
+    creditCard: "",
+    numberCreditCard: "",
+    company: "",
+    phoneCompany: "",
+    reservadoPor: "",
+    reservationDate: "",
+    observations: "",
   });
 
   const inputs = [
@@ -16,11 +22,11 @@ const FormReserva = () => {
       id: 1,
       name: "userName",
       type: "text",
-      placeholder: "Username",
+      placeholder: "Nombres y Apellidos",
       errorMessage:
-        "Username debe tener 3-16 caracteres y no incluye caracteres especiales!",
-      label: "Username",
-      pattern: "^[A-Za-z0-9]{3,16}$",
+        "El nombre completo debe contener, minimo un nombre y dos apellidos",
+      label: "Nombres y Apellidos",
+      pattern: `^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$`,
       required: true,
     },
     {
@@ -35,39 +41,74 @@ const FormReserva = () => {
     },
     {
       id: 3,
-      name: "birthday",
-      type: "date",
-      placeholder: "Birthday",
-      errorMessage: "ingresa una fecha correctamente",
-      label: "Birthday",
+      name: "phone",
+      type: "number",
+      placeholder: "Telefono - Celular",
+      errorMessage: "ingresa un numero de telefono o celular de 8 caracteres",
+      label: "Telefono - Celular",
+      pattern: `^[0-9]{8}$`,
       required: true,
     },
     {
       id: 4,
-      name: "password",
-      type: "password",
-      placeholder: "password",
-      errorMessage:
-        "Password debe tener 6-20 caracteres, debe incluir una letra, un numero y un caracter especial",
-      label: "password",
-      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,20}$`,
-      required: true,
+      name: "creditCard",
+      type: "number",
+      placeholder: "Tarjeta de Credito",
+      label: "Tarjeta de Credito",
     },
     {
       id: 5,
-      name: "confirmPassword",
+      name: "numberCreditCard",
+      type: "number",
+      placeholder: "Numero de Tarjeta de Credito",
+      label: "Numero de Tarjeta de Credito",
+    },
+    {
+      id: 6,
+      name: "company",
       type: "text",
-      placeholder: "Confirm Password",
-      errorMessage: "Los passwords no estan coincidiendo",
-      label: "Confirm Password",
-      pattern: values.password,
+      placeholder: "Empresa/Institucion",
+      label: "Empresa/Institucion",
+    },
+    {
+      id: 7,
+      name: "phoneCompany",
+      type: "number",
+      placeholder: "Telefono(Empresa/Institucion)",
+      label: "telefono(Empresa/Institucion)",
+    },
+    {
+      id: 8,
+      name: "reservadoPor",
+      type: "text",
+      placeholder: "Nombre completo del reservante",
+      errorMessage:
+        "El nombre completo debe contener, minimo un nombre y dos apellidos, sin caracteres especiales, tampoco numeros!",
+      label: "Reservado por:",
+      pattern: `^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$`,
       required: true,
+    },
+    {
+      id: 9,
+      name: "reservationDate",
+      type: "date",
+      placeholder: "Fecha de reserva",
+      errorMessage: "ingresa una fecha valida",
+      label: "Fecha de reserva",
+      required: true,
+    },
+    {
+      id: 10,
+      name: "observations",
+      type: "text",
+      placeholder: "observaciones",
+      label: "observaciones",
     },
   ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    console.log(values);
   };
 
   const onChange = (e) => {
@@ -75,7 +116,7 @@ const FormReserva = () => {
   };
   console.log(values);
   return (
-    <div className="app">
+    <div className="app-form-reservas">
       <form onSubmit={handleSubmit}>
         <h2>FORMULARIO DE RESERVAS</h2>
         {inputs.map((input) => (
@@ -86,6 +127,7 @@ const FormReserva = () => {
             onChange={onChange}
           />
         ))}
+        <ContactCheckbox />
 
         <button>Submit</button>
       </form>

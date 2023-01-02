@@ -12,9 +12,9 @@ const FormInputReserva = (props) => {
  
     return (
     <div className="formInputReserva" >
-      <label >{label}</label>
-      <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused={focused.toString()} />
-      <span id="green">{errorMessage}</span>
+        <label >{label}</label>
+        <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused={focused.toString()} />
+        <span >{errorMessage}</span>
     </div>
   )
 }
