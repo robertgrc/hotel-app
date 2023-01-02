@@ -1,9 +1,8 @@
 import { useState } from "react";
+import FormInputReserva from "./FormInputReserva";
+import "./FormInputReserva";
 
-import FormInput from "./FormInput";
-import "./FormInput.css";
-
-const FormContact = () => {
+const FormReserva = () => {
   const [values, setValues] = useState({
     userName: "",
     email: "",
@@ -80,7 +79,7 @@ const FormContact = () => {
       <form onSubmit={handleSubmit}>
         <h1>Registro</h1>
         {inputs.map((input) => (
-          <FormInput
+          <FormInputReserva
             key={input.id}
             {...input}
             value={values[input.name]}
@@ -94,4 +93,4 @@ const FormContact = () => {
   );
 };
 
-export default FormContact;
+export default FormReserva;
