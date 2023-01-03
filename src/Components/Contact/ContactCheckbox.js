@@ -33,7 +33,7 @@ export default function ContactCheckbox() {
   return (
     <Box sx={{ display: "flex" }}>
       {/* <FormLabel component="legend">Tipo de Habitación</FormLabel> */}
-
+      <div className="label-form">Tipo de Habitacion</div>
       <FormControl
         sx={{ ml: 7, mr: 7 }}
         component="fieldset"

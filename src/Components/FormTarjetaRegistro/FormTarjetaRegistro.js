@@ -85,8 +85,8 @@ const FormTarjetaRegistro = () => {
       id: 10,
       name: "observations",
       type: "text",
-      placeholder: "observaciones",
-      label: "observaciones",
+      placeholder: "Observaciones",
+      label: "Observaciones",
     },
   ];
 

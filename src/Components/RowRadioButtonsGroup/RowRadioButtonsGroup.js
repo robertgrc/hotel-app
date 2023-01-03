@@ -1,6 +1,5 @@
 import * as React from "react";
 import Radio from "@mui/material/Radio";
-import { Typography } from "@mui/material";
 
 export default function RowRadioButtonsGroup() {
   const [selectedValue, setSelectedValue] = React.useState("si");
@@ -11,9 +10,7 @@ export default function RowRadioButtonsGroup() {
 
   return (
     <div>
-      <div>
-        <Typography>Tiene Equipaje? </Typography>
-      </div>
+      <div className="label-form">Tiene Equipaje?</div>
       <div>
         <Radio
           checked={selectedValue === "si"}
