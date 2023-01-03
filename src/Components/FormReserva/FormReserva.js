@@ -117,20 +117,29 @@ const FormReserva = () => {
   console.log(values);
   return (
     <div className="app-form-reservas">
-      <form onSubmit={handleSubmit}>
-        <h2>FORMULARIO DE RESERVAS</h2>
-        {inputs.map((input) => (
-          <FormInputReserva
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <ContactCheckbox />
-
-        <button>Submit</button>
-      </form>
+      <div className="form-reserva">
+        <form onSubmit={handleSubmit}>
+          <div className="h2-reserva">
+            <h2>FORMULARIO DE RESERVAS</h2>
+          </div>
+          {inputs.map((input) => (
+            <div className="formInputReserva">
+              <FormInputReserva
+                key={input.id}
+                {...input}
+                value={values[input.name]}
+                onChange={onChange}
+              />
+            </div>
+          ))}
+          <div className="contactCheckbox">
+            <ContactCheckbox />
+          </div>
+          <div className="submit-reserva">
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
