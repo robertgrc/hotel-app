@@ -9,10 +9,10 @@ export const purpleTheme = createTheme({
       main: "#9155fd",
     },
     error: {
-      main: "#ffb400",
+      main: "#f5f5f5",
     },
   },
   status: {
-    danger: "orange",
+    danger: "#f5f5f5",
   },
 });

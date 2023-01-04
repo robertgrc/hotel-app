@@ -6,6 +6,7 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 //import FormHelperText from "@mui/material/FormHelperText";
 import Checkbox from "@mui/material/Checkbox";
+import { Typography } from "@mui/material";
 
 export default function ContactCheckbox() {
   const [state, setState] = React.useState({
@@ -42,25 +43,50 @@ export default function ContactCheckbox() {
         <FormGroup>
           <FormControlLabel
             control={
-              <Checkbox checked={SWB} onChange={handleChange} name="SWB" />
+              <Checkbox
+                checked={SWB}
+                onChange={handleChange}
+                name="SWB"
+                sx={{
+                  color: "white",
+                  "&.Mui-checked": {
+                    color: "primary",
+                  },
+                }}
+              />
             }
             label="SWB"
           />
           <FormControlLabel
             control={
-              <Checkbox checked={MAT} onChange={handleChange} name="MAT" />
+              <Checkbox
+                checked={MAT}
+                onChange={handleChange}
+                name="MAT"
+                sx={{ color: "white" }}
+              />
             }
             label="MAT"
           />
           <FormControlLabel
             control={
-              <Checkbox checked={DWB} onChange={handleChange} name="DWB" />
+              <Checkbox
+                checked={DWB}
+                onChange={handleChange}
+                name="DWB"
+                sx={{ color: "white" }}
+              />
             }
             label="DWB"
           />
           <FormControlLabel
             control={
-              <Checkbox checked={TWB} onChange={handleChange} name="TWB" />
+              <Checkbox
+                checked={TWB}
+                onChange={handleChange}
+                name="TWB"
+                sx={{ color: "white" }}
+              />
             }
             label="TWB"
           />
@@ -74,7 +100,12 @@ export default function ContactCheckbox() {
         <FormGroup>
           <FormControlLabel
             control={
-              <Checkbox checked={Suite} onChange={handleChange} name="Suite" />
+              <Checkbox
+                checked={Suite}
+                onChange={handleChange}
+                name="Suite"
+                sx={{ color: "white" }}
+              />
             }
             label="Suite"
           />
@@ -84,13 +115,19 @@ export default function ContactCheckbox() {
                 checked={Simple}
                 onChange={handleChange}
                 name="Simple"
+                sx={{ color: "white" }}
               />
             }
             label="Simple"
           />
           <FormControlLabel
             control={
-              <Checkbox checked={Doble} onChange={handleChange} name="Doble" />
+              <Checkbox
+                checked={Doble}
+                onChange={handleChange}
+                name="Doble"
+                sx={{ color: "white" }}
+              />
             }
             label="Doble"
           />

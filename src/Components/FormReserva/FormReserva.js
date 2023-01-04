@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import FormInputReserva from "./FormInputReserva";
 import "./FormInputReserva";
 import ContactCheckbox from "../Contact/ContactCheckbox";
@@ -111,6 +112,41 @@ const FormReserva = () => {
     console.log(values);
   };
 
+  const getReserva = async () => {
+    try {
+      const url = "http://localhost:4000/api/reserva";
+      const response = await axios.get(url);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const createReserva = async () => {
+    try {
+      const url = "http://localhost:4000/api/reserva";
+
+      const body = {
+        nombreCompleto: values.userName,
+        email: values.email,
+        telefono: values.phone,
+        tarjetaCredito: values.creditCard,
+        numeroTarjeta: values.numberCreditCard,
+        empresa: values.company,
+        telefonoEmpresa: values.phoneCompany,
+        reservadoPor: values.reservadoPor,
+        fechaReserva: values.reservationDate,
+        tipoHabitacion: "123456",
+        observaciones: values.observations,
+      };
+
+      const response = await axios.post(url, body);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -137,6 +173,12 @@ const FormReserva = () => {
           </div>
           <div className="submit-reserva">
             <button>Submit</button>
+          </div>
+          <div className="submit-reserva">
+            <button onClick={createReserva}>Crear Reserva</button>
+          </div>
+          <div className="submit-reserva" onClick={getReserva}>
+            <button>Obtener Reservas</button>
           </div>
         </form>
       </div>
