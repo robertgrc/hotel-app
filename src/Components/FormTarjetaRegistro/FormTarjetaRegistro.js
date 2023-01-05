@@ -4,6 +4,7 @@ import "./FormInputTarjetaRegistro";
 import ContactCheckbox from "../Contact/ContactCheckbox";
 
 import RowRadioButtonsGroup from "../RowRadioButtonsGroup/RowRadioButtonsGroup";
+import axios from "axios";
 
 const FormTarjetaRegistro = () => {
   const [values, setValues] = useState({
@@ -83,7 +84,7 @@ const FormTarjetaRegistro = () => {
     },
     {
       id: 10,
-      name: "observations",
+      name: "observaciones",
       type: "text",
       placeholder: "Observaciones",
       label: "Observaciones",
@@ -93,6 +94,41 @@ const FormTarjetaRegistro = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(values);
+  };
+
+  const getRegistro = async () => {
+    try {
+      const url = "http://localhost:4000/api/registro";
+      const response = await axios.get(url);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const createRegistro = async () => {
+    try {
+      const url = "http://localhost:4000/api/registro";
+
+      const body = {
+        nombreCompleto: values.nombreCompleto,
+        nacionalidad: values.nacionalidad,
+        profesion: values.profesion,
+        procedencia: values.procedencia,
+        edad: values.edad,
+        estadoCivil: values.estadoCivil,
+        direccion: values.direccion,
+        motivoViaje: values.motivoViaje,
+        tieneEquipaje: values.tieneEquipaje,
+        tipoHabitacion: values.tipoHabitacion,
+        observaciones: values.observaciones,
+      };
+
+      const response = await axios.post(url, body);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const onChange = (e) => {
@@ -115,6 +151,8 @@ const FormTarjetaRegistro = () => {
         <RowRadioButtonsGroup />
 
         <button>Submit</button>
+        <button onClick={getRegistro}>Obtener Registro</button>
+        <button onClick={createRegistro}>Crear Registro</button>
       </form>
     </div>
   );

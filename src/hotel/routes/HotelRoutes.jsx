@@ -14,6 +14,8 @@ export const HotelRoutes = () => {
         <Route path="/registroUsuario" element={<FormContact />} />
         <Route path="/registroReserva" element={<FormReserva />} />
         <Route path="/registroTarjeta" element={<FormTarjetaRegistro />} />
+        <Route path="/hotelpage" element={<HotelPage />} />
+        
 
         <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
