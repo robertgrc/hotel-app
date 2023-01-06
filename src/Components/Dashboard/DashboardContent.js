@@ -45,12 +45,14 @@ const drawerWidth = 240;
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
+  backgroundColor: "#28243d",
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(["width", "margin"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
+    backgroundColor: "#28243d",
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
@@ -64,6 +66,7 @@ const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   "& .MuiDrawer-paper": {
+    backgroundColor: "#28243d",
     position: "relative",
     whiteSpace: "nowrap",
     width: drawerWidth,
@@ -73,6 +76,7 @@ const Drawer = styled(MuiDrawer, {
     }),
     boxSizing: "border-box",
     ...(!open && {
+      backgroundColor: "#28243d",
       overflowX: "hidden",
       transition: theme.transitions.create("width", {
         easing: theme.transitions.easing.sharp,
@@ -126,7 +130,7 @@ function DashboardContent() {
               Panel de Control
             </Typography>
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
+              <Badge badgeContent={4} color="primary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

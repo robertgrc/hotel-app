@@ -1,0 +1,49 @@
+// import * as React from "react";
+
+// import {
+//   IconButton,
+//   MenuIcon,
+//   SearchIcon,
+//   AccountCircle,
+//   MailIcon,
+//   NotificationsIcon,
+//   MoreIcon,
+// } from "@mui/icons-material";
+
+// import { styled, alpha } from "@mui/material";
+// import {
+//   AppBar,
+//   Box,
+//   Toolbar,
+//   Typography,
+//   InputBase,
+//   Badge,
+//   MenuItem,
+//   Menu,
+// } from "@mui/material";
+
+///desde aqui componente
+// const BootstrapButton = styled(Button)({
+//     boxShadow: "none",
+//     textTransform: "none",
+//     fontSize: 16,
+//     padding: "6px 12px",
+//     border: "1px solid",
+//     lineHeight: 1.5,
+//     //backgroundColor: "red",
+//     backgroundColor: purpleTheme.palette.secondary.main,
+//     borderColor: "#0063cc",
+//     color: "yellow",
+//   });
+
+// const Navbar = () => {
+//   return (
+//     <AppBar>
+//       <Toolbar>
+//         <Typography variant="h6"> Hotel Dev</Typography>
+//       </Toolbar>
+//     </AppBar>
+//   );
+// };
+
+// export default Navbar;
