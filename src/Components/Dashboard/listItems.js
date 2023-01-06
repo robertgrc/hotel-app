@@ -50,57 +50,129 @@ export const mainListItems = (
         <DashboardIcon sx={{ color: " #f3e5f5" }} />
         {/* <HomeIcon color="primary" /> */}
       </ListItemIcon>
-      <ListItemText primary="Panel de Control" />
+      <ListItemText
+        primary="Panel de Control"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <ShoppingCartIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Reservas" />
+      <ListItemText
+        primary="Reservas"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <PeopleIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Clientes" />
+      <ListItemText
+        primary="Clientes"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <BarChartIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Reportes" />
+      <ListItemText
+        primary="Reportes"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <DescriptionIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Pages" />
+      <ListItemText
+        primary="Pages"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
   </React.Fragment>
 );
 
 export const secondaryListItems = (
   <React.Fragment>
-    <ListSubheader component="div" inset>
+    <ListSubheader
+      component="div"
+      inset
+      sx={{
+        color: "rgba(231, 227, 252, 0.38)",
+        backgroundColor: "#28243d",
+        fontFamily: "Inter, sans-serif, apple-system, BlinkMacSystemFont",
+      }}
+    >
       Reportes Guardados
     </ListSubheader>
     <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Ultimas Reservas" />
+      <ListItemText
+        primary="Ultimas Reservas"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Lista reservas" />
+      <ListItemText
+        primary="Lista reservas"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Usuarios Registrados" />
+      <ListItemText
+        primary="Usuarios Registrados"
+        sx={{
+          "&:hover": {
+            backgroundColor: "#312d4b",
+            transition: "0.25s ease-in-out 0s",
+          },
+        }}
+      />
     </ListItemButton>
   </React.Fragment>
 );

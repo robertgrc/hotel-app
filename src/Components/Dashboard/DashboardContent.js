@@ -106,6 +106,10 @@ function DashboardContent() {
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
+              "&:hover": {
+                backgroundColor: "#312d4b",
+                transition: "0.25s ease-in-out 0s",
+              },
             }}
           >
             <IconButton
@@ -136,13 +140,23 @@ function DashboardContent() {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={open}>
+        <Drawer
+          variant="permanent"
+          open={open}
+          sx={{
+            "&:hover": {
+              backgroundColor: "#312d4b",
+              transition: "0.25s ease-in-out 0s",
+            },
+          }}
+        >
           <Toolbar
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
               px: [1],
+              "&:hover": { backgroundColor: "#312d4b" },
             }}
           >
             <IconButton onClick={toggleDrawer}>
@@ -159,10 +173,7 @@ function DashboardContent() {
         <Box
           component="main"
           sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === "light"
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+            backgroundColor: "#28243d",
             flexGrow: 1,
             height: "100vh",
             overflow: "auto",
