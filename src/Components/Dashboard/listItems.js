@@ -7,40 +7,74 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import LayersIcon from "@mui/icons-material/Layers";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import DescriptionIcon from "@mui/icons-material/Description";
+
+import { green, yellow } from "@mui/material/colors";
+import SvgIcon from "@mui/material/SvgIcon";
+import Box from "@mui/material/Box";
+function HomeIcon(props) {
+  return (
+    <SvgIcon {...props}>
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+    </SvgIcon>
+  );
+}
+
+export default function SvgIconsColor() {
+  return (
+    <Box
+      sx={{
+        "& > :not(style)": {
+          m: 2,
+        },
+      }}
+    >
+      <HomeIcon />
+      <HomeIcon color="primary" />
+      <HomeIcon color="secondary" />
+      <HomeIcon color="success" />
+      <HomeIcon color="action" />
+      <HomeIcon color="disabled" />
+      <HomeIcon sx={{ color: green }} />
+      <DashboardIcon sx={{ color: yellow }} />
+      <PeopleIcon sx={{ color: "#f3e5f5" }} />
+    </Box>
+  );
+}
 
 export const mainListItems = (
   <React.Fragment>
     <ListItemButton>
-      <ListItemIcon backgroundColor="#fff" color="#fff">
-        <DashboardIcon />
+      <ListItemIcon>
+        <DashboardIcon sx={{ color: " #f3e5f5" }} />
+        {/* <HomeIcon color="primary" /> */}
       </ListItemIcon>
       <ListItemText primary="Panel de Control" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <ShoppingCartIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
       <ListItemText primary="Reservas" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <PeopleIcon />
+        <PeopleIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
       <ListItemText primary="Clientes" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <BarChartIcon />
+        <BarChartIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
       <ListItemText primary="Reportes" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <LayersIcon />
+        <DescriptionIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="Pages" />
     </ListItemButton>
   </React.Fragment>
 );
@@ -52,19 +86,19 @@ export const secondaryListItems = (
     </ListSubheader>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
       <ListItemText primary="Ultimas Reservas" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
       <ListItemText primary="Lista reservas" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
       <ListItemText primary="Usuarios Registrados" />
     </ListItemButton>
