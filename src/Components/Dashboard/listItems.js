@@ -9,112 +9,80 @@ import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import DescriptionIcon from "@mui/icons-material/Description";
+import AcordionButton from "./AcordionButton/AcordionButton";
 
-import { green, yellow } from "@mui/material/colors";
-import SvgIcon from "@mui/material/SvgIcon";
-import Box from "@mui/material/Box";
-function HomeIcon(props) {
-  return (
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
-  );
-}
-
-export default function SvgIconsColor() {
-  return (
-    <Box
-      sx={{
-        "& > :not(style)": {
-          m: 2,
-        },
-      }}
-    >
-      <HomeIcon />
-      <HomeIcon color="primary" />
-      <HomeIcon color="secondary" />
-      <HomeIcon color="success" />
-      <HomeIcon color="action" />
-      <HomeIcon color="disabled" />
-      <HomeIcon sx={{ color: green }} />
-      <DashboardIcon sx={{ color: yellow }} />
-      <PeopleIcon sx={{ color: "#f3e5f5" }} />
-    </Box>
-  );
-}
+const handleReservaClick = () => {
+  console.log("click button reserva");
+};
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+    >
       <ListItemIcon>
         <DashboardIcon sx={{ color: " #f3e5f5" }} />
         {/* <HomeIcon color="primary" /> */}
       </ListItemIcon>
-      <ListItemText
-        primary="Panel de Control"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Panel de Control" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+      onClick={handleReservaClick}
+    >
       <ListItemIcon>
         <ShoppingCartIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText
-        primary="Reservas"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Reservas" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+    >
       <ListItemIcon>
         <PeopleIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText
-        primary="Clientes"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Clientes" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+    >
       <ListItemIcon>
         <BarChartIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText
-        primary="Reportes"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Reportes" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+    >
       <ListItemIcon>
         <DescriptionIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText
-        primary="Pages"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Pages" />
     </ListItemButton>
   </React.Fragment>
 );
@@ -132,47 +100,48 @@ export const secondaryListItems = (
     >
       Reportes Guardados
     </ListSubheader>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+    >
       <ListItemIcon>
         <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText
-        primary="Ultimas Reservas"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Ultimas Reservas" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+    >
       <ListItemIcon>
         <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText
-        primary="Lista reservas"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Lista reservas" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      sx={{
+        "&:hover": {
+          backgroundColor: "#312d4b",
+          transition: "0.25s ease-in-out 0s",
+        },
+      }}
+    >
       <ListItemIcon>
         <AssignmentIcon sx={{ color: " #f3e5f5" }} />
       </ListItemIcon>
-      <ListItemText
-        primary="Usuarios Registrados"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#312d4b",
-            transition: "0.25s ease-in-out 0s",
-          },
-        }}
-      />
+      <ListItemText primary="Usuarios Registrados" />
     </ListItemButton>
+
+    <AcordionButton sx={{ color: " #f3e5f5" }}>
+      <ListItemText />
+    </AcordionButton>
   </React.Fragment>
 );

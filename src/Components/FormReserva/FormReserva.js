@@ -141,7 +141,7 @@ const FormReserva = () => {
       };
 
       const response = await axios.post(url, body);
-      console.log(response);
+      console.log(response.nacionalidad);
     } catch (error) {
       console.log(error);
     }
