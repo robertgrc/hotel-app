@@ -5,6 +5,7 @@ import ContactCheckbox from "../Contact/ContactCheckbox";
 
 import RowRadioButtonsGroup from "../RowRadioButtonsGroup/RowRadioButtonsGroup";
 import axios from "axios";
+// import TarjetaRegistro from "./TarjetaRegistro/TarjetaRegistro";
 
 const FormTarjetaRegistro = () => {
   const [values, setValues] = useState({
@@ -16,7 +17,7 @@ const FormTarjetaRegistro = () => {
     estadoCivil: "",
     direccion: "",
     motivoViaje: "",
-    observations: "",
+    observaciones: "",
   });
 
   const inputs = [
@@ -93,7 +94,7 @@ const FormTarjetaRegistro = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(values);
+    //console.log(values);
   };
 
   const getRegistro = async () => {
@@ -134,7 +135,7 @@ const FormTarjetaRegistro = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  console.log(values);
+  //console.log(values);
   return (
     <div className="app-form-tarjeta-registro">
       <form onSubmit={handleSubmit}>
@@ -154,6 +155,7 @@ const FormTarjetaRegistro = () => {
         <button onClick={getRegistro}>Obtener Registro</button>
         <button onClick={createRegistro}>Crear Registro</button>
       </form>
+      {/* <TarjetaRegistro  /> */}
     </div>
   );
 };

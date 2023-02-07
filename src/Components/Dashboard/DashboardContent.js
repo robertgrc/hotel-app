@@ -210,7 +210,14 @@ function DashboardContent() {
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    backgroundColor: "#312d4b",
+                  }}
+                >
                   <Orders />
                 </Paper>
               </Grid>

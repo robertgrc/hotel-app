@@ -28,7 +28,7 @@ export default function ContactCheckbox() {
 
   const { SWB, MAT, DWB, TWB, Suite, Simple, Doble } = state;
 
-  console.log(SWB, MAT, DWB, TWB, Suite, Simple, Doble);
+  //console.log(SWB, MAT, DWB, TWB, Suite, Simple, Doble);
   // const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
 
   return (

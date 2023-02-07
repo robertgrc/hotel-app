@@ -5,6 +5,8 @@ import Contact from "../../Components/Contact/Contact"
 import FormReserva from "../../Components/FormReserva/FormReserva"
 import FormContact from "../../Components/Forms/FormContact"
 import FormTarjetaRegistro from "../../Components/FormTarjetaRegistro/FormTarjetaRegistro"
+import AppPokemon from "../../Redux/AppPokemon"
+import AppRedux from "../../Redux/AppRedux"
 import { HotelPage } from "../pages/HotelPage"
 
 export const HotelRoutes = () => {
@@ -19,6 +21,8 @@ export const HotelRoutes = () => {
         <Route path="/hotelpage" element={<HotelPage />} />
         <Route path="/componente1" element={<Componente1 />} />
         <Route path="/Main" element={<Main />} />
+        <Route path="/redux" element={<AppRedux />} />
+        <Route path="/pokemon" element={<AppPokemon />} />
         
 
         <Route path="/*" element={<Navigate to="/" />} />

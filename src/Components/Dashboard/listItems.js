@@ -140,8 +140,8 @@ export const secondaryListItems = (
       <ListItemText primary="Usuarios Registrados" />
     </ListItemButton>
 
-    <AcordionButton sx={{ color: " #f3e5f5" }}>
+    {/* <AcordionButton>
       <ListItemText />
-    </AcordionButton>
+    </AcordionButton> */}
   </React.Fragment>
 );

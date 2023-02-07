@@ -57,7 +57,7 @@ const FormContact = () => {
     {
       id: 5,
       name: "confirmPassword",
-      type: "text",
+      type: "password",
       placeholder: "Confirm Password",
       errorMessage: "Los passwords no estan coincidiendo",
       label: "Confirm Password",
