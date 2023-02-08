@@ -2,8 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import FormInputReserva from "./FormInputReserva";
 import "./FormInputReserva";
-import ContactCheckbox from "../Contact/ContactCheckbox";
-import Checkboxes from "../Checkbox/Checkboxes";
+import MultipleCheckbox from "../MultipleCheckbox/MultipleCheckbox";
 
 const FormReserva = () => {
   const [values, setValues] = useState({
@@ -173,9 +172,10 @@ const FormReserva = () => {
           {/* <div className="contactCheckbox">
             <ContactCheckbox />
           </div> */}
-          <div>
-            <Checkboxes />
+          <div className="multipleCheckbox">
+            <MultipleCheckbox />
           </div>
+
           <div className="Botones">
             <div className="submit-reserva">
               <button>Submit</button>

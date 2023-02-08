@@ -40,6 +40,14 @@ h2{
     text-align: center;
 }
 
+.titleCheckbox{
+    width: 700px;
+    font-size: 12px;
+    color: whitesmoke;
+    margin-bottom: 0;
+    
+}
+
 
 .formInputReserva{
     display: flex;
@@ -70,3 +78,40 @@ h2{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.multipleCheckbox{
+    
+    width: 100%;
+}
+
+.Checkboxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.CheckboxContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 50px;
+}
+
+.MultipleCheckBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    
+}
+
+.inputCheckbox{
+    width: auto;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+h5 {
+    color: whitesmoke;
+}
+

@@ -1,10 +1,9 @@
 import { useState } from "react";
 import FormInputTarjetaRegistro from "./FormInputTarjetaRegistro";
 import "./FormInputTarjetaRegistro";
-import ContactCheckbox from "../Contact/ContactCheckbox";
-
 import RowRadioButtonsGroup from "../RowRadioButtonsGroup/RowRadioButtonsGroup";
 import axios from "axios";
+import MultipleCheckbox from "../MultipleCheckbox/MultipleCheckbox";
 // import TarjetaRegistro from "./TarjetaRegistro/TarjetaRegistro";
 
 const FormTarjetaRegistro = () => {
@@ -151,7 +150,7 @@ const FormTarjetaRegistro = () => {
           ))}
         </div>
         <div className="ContactCheckbox">
-          <ContactCheckbox />
+          <MultipleCheckbox />
         </div>
         <div className="RowRadioButtonsGroup">
           <RowRadioButtonsGroup />
