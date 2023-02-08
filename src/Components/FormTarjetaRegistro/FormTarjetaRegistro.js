@@ -139,17 +139,23 @@ const FormTarjetaRegistro = () => {
   return (
     <div className="app-form-tarjeta-registro">
       <form onSubmit={handleSubmit}>
-        <h2>TARJETA DE REGISTRO</h2>
-        {inputs.map((input) => (
-          <FormInputTarjetaRegistro
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <ContactCheckbox />
-        <RowRadioButtonsGroup />
+        <div className="datosRegistro">
+          <h2>TARJETA DE REGISTRO</h2>
+          {inputs.map((input) => (
+            <FormInputTarjetaRegistro
+              key={input.id}
+              {...input}
+              value={values[input.name]}
+              onChange={onChange}
+            />
+          ))}
+        </div>
+        <div className="ContactCheckbox">
+          <ContactCheckbox />
+        </div>
+        <div className="RowRadioButtonsGroup">
+          <RowRadioButtonsGroup />
+        </div>
 
         <button>Submit</button>
         <button onClick={getRegistro}>Obtener Registro</button>

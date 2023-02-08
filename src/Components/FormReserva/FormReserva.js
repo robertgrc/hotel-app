@@ -3,6 +3,7 @@ import axios from "axios";
 import FormInputReserva from "./FormInputReserva";
 import "./FormInputReserva";
 import ContactCheckbox from "../Contact/ContactCheckbox";
+import Checkboxes from "../Checkbox/Checkboxes";
 
 const FormReserva = () => {
   const [values, setValues] = useState({
@@ -168,17 +169,23 @@ const FormReserva = () => {
               />
             </div>
           ))}
-          <div className="contactCheckbox">
+
+          {/* <div className="contactCheckbox">
             <ContactCheckbox />
+          </div> */}
+          <div>
+            <Checkboxes />
           </div>
-          <div className="submit-reserva">
-            <button>Submit</button>
-          </div>
-          <div className="submit-reserva">
-            <button onClick={createReserva}>Crear Reserva</button>
-          </div>
-          <div className="submit-reserva" onClick={getReserva}>
-            <button>Obtener Reservas</button>
+          <div className="Botones">
+            <div className="submit-reserva">
+              <button>Submit</button>
+            </div>
+            <div className="submit-reserva">
+              <button onClick={createReserva}>Crear Reserva</button>
+            </div>
+            <div className="submit-reserva" onClick={getReserva}>
+              <button>Obtener Reservas</button>
+            </div>
           </div>
         </form>
       </div>
