@@ -68,15 +68,15 @@ const FormReserva = () => {
       id: 6,
       name: "company",
       type: "text",
-      placeholder: "Empresa/Institucion",
-      label: "Empresa/Institucion",
+      placeholder: "Empresa/Institución)",
+      label: "Empresa/Institución)",
     },
     {
       id: 7,
       name: "phoneCompany",
       type: "number",
-      placeholder: "Telefono(Empresa/Institucion)",
-      label: "telefono(Empresa/Institucion)",
+      placeholder: "Telefono(Empresa/Institución)",
+      label: "Telefono(Empresa/Institución))",
     },
     {
       id: 8,
@@ -102,8 +102,8 @@ const FormReserva = () => {
       id: 10,
       name: "observations",
       type: "text",
-      placeholder: "observaciones",
-      label: "observaciones",
+      placeholder: "Observaciones",
+      label: "Observaciones",
     },
   ];
 
