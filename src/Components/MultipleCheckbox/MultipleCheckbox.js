@@ -1,19 +1,20 @@
 import { useState } from "react";
+import TypeCheckbox from "./TypeCheckbox";
 import { TypeOfRoomData } from "./TypeOfRoomData";
 
 export default function App() {
-  const [checkedState, setCheckedState] = useState(
+  const [typeRoomChecked, setTypeRoomChecked] = useState(
     new Array(TypeOfRoomData.length).fill(false)
   );
 
   const handleOnChange = (position) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
+    const updatedCheckedState = typeRoomChecked.map((item, index) =>
       index === position ? !item : item
     );
 
-    setCheckedState(updatedCheckedState);
+    setTypeRoomChecked(updatedCheckedState);
   };
-  console.log(checkedState);
+  console.log(typeRoomChecked);
 
   return (
     <div className="CheckboxContainer">
@@ -22,19 +23,12 @@ export default function App() {
       {TypeOfRoomData.map(({ name }, index) => {
         return (
           <div key={index}>
-            <div className="Checkboxes">
-              <div className="MultipleCheckBox">
-                <label className="labelCheckbox">{name}</label>
-                <input
-                  className="inputCheckbox"
-                  type="checkbox"
-                  name={name}
-                  value={name}
-                  checked={checkedState[index]}
-                  onChange={() => handleOnChange(index)}
-                />
-              </div>
-            </div>
+            <TypeCheckbox
+              index={index}
+              name={name}
+              typeRoomChecked={typeRoomChecked}
+              handleOnChange={handleOnChange}
+            />
           </div>
         );
       })}
